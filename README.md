@@ -23,7 +23,27 @@ We also tried implementing a custom augmentation to simulate a more realistic en
 
 We first consider a first simple model, constituted by 3 increasing-depth blocks of 2 convolutional and activation layers alternated with layers of Max Pooling and, at the top, a fully connected network with one hidden layer. To reduce overfitting, we have also added 2 dropout layers. The input has been normalized by dividing by 255. The model is represented in Figure 3 and summarized in Table 1.
 Initially, we had extracted a small part of the data to use it as a test set. However, the accuracy on this test set was very different from that obtained on the competition test. Then, we have decided to use all the available dataset to carry out training and validation and to test the model through the challenge platform. The performance of this model was not so low (score: 0.64), but extremely improvable especially for the classes Potato, Apple, Cherry and Corn.
+    
+| Layer (type)       	| Output Shape   	| # Param 	|
+|--------------------	|----------------	|---------	|
+| Input (InputLayer) 	| (256,256, 3)   	|         	|
+| convolution 1      	| (128, 128, 8)  	| 1184    	|
+| convolution 2      	| (128, 128, 16) 	| 6288    	|
+| convolution 3      	| (32, 32, 32)   	| 12832   	|
+| convolution 4      	| (32, 32, 32)   	| 25632   	|
+| convolution 3      	| (8, 8, 64)     	| 51264   	|
+| convolution 4      	| (8, 8, 64)     	| 102464  	|
+| Classifier         	| 512            	| 524800  	|
+       
+Table 1. Structure of our first model.
 
+<p align="center">
+<img src="./media/modellinocarino.png" height="500" alt="custom augmentation"/>
+<p align="center">
+Figure 3: Three increasing-depth blocks of two convolutional layers alternated with layers of MaxPooling. At the top a fully connected layer with one hidden layer.     
+        
+
+        
 ## 4. Two approaches to face classes unbalanceness
 At this stage of the project, we were faced with the fact that the classes in our training dataset were not balanced.
 
