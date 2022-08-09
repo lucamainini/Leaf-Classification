@@ -60,3 +60,6 @@ After having tested our alternatives we have realized that the best performing o
 The Xception network proved to be the most accurate, this result is expected since it is also the best performing on the Imagenet dataset; close performances were provided also by MobileNetV3 with an accuracy of 0.8868 and VGG16 with 0.866. 
 The fact that the performance obtained with MobileNetV3 is comparable with the one of other models (much heavier) is an indication that we don’t need too many convolutional layers to extract the proper class features from simple images as ours.
 To make our model more robust, a future improvement could be to split our biggest category (Tomato) in $k$ subsets $S_i$ such that $|S_i|$ is comparable with the cardinality of the other class sets. Then train $k$ models, one for each $S_i$ and all the other whole categories and finally average them. We couldn’t try this approach for time reasons. 
+
+## Acknowledgement
+This project was realised together with Giovanni Dragonetti and Erica Espinosa. 
