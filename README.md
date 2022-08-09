@@ -83,6 +83,10 @@ To make our model more robust we also tried using test time augmentations: feedi
 
 ## 8. Final model
 After having tested our alternatives we have realized that the best performing one is the Xception added with one hidden layers with 128 neurons. The model was trained using the class weights technique on the augmented set. The global accuracy obtained in the final test set is 0.9018867925. Figure 4 shows training and validation curves.
+<p align="center">
+<img src="./media/plottini.png" height="400" alt="final plots"/>
+<p align="center">
+Figure 4: Loss function and accuracy of the best model.     
 
 ## 9. Conclusion
 The Xception network proved to be the most accurate, this result is expected since it is also the best performing on the Imagenet dataset; close performances were provided also by MobileNetV3 with an accuracy of 0.8868 and VGG16 with 0.866. 
