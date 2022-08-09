@@ -3,13 +3,21 @@
 
 ## 1. Introduction
 The problem we had to face is the classification of leaves images. Our dataset is composed by 17.728 images divided into 14 classes: Apple, Blueberry, Cherry, Corn, Grape, Orange, Peach, Pepper, Potato, Raspberry, Soybean, Squash, Strawberry and Tomato. Most of the images have dimensions 256 x 256 and have been isolated on a black background except for three outliers with different shapes; we resized them either before feeding them to the network or in the network itself. We first noticed the unbalanceness of our classes, as shown in *Figure 1*. To address this issue, we experimented two different approaches: class weights and dataset balancing via upsampling. We first built a simple model to check what we could achieve with very few levels, then we experimented the transfer learning technique with some of the most important models in image recognition.
-
-image
+    <p align="center">
+    <img src="./media/istogramma_carino.png" height="350" alt="cardinality_classes"/>
+    
+    Figure 1: Notice that the cardinality of the Tomato class is more than 20 times superior to the one of the Raspberry’s
+  
 
 ## 2. Data Augmentation
 Since some classes contain a limited number of data, we have decided to use the data augmentation technique. We initially tried to figure out how to modify the images, particularly how to set the parameters of ImageDataGenerator. Displaying generated images, we could broadly understand the range of these hyperparameters: for instance, a brightness parameter superior to 2 generates meaningless images.
 We then trained our model on images generated with different parameters saving for each combination of values the model and the score obtained on the validation. Then, we would have liked to test these models on the CodaLab set and then choose the best parameters with respect to the obtained value [`Data_Augmentation_Tuning.ipynb`]. Unfortunately, we had a too limited number of attempts, so we leave this tuning procedure as improvements to be done in the future.
 We also tried implementing a custom augmentation to simulate a more realistic environment as shown in Figure 2 [`Custom_Augmentation.ipynb`] but this proved unsuccessful.
+    <p align="center">
+    <img src="./media/fogliette_carine.jpg" height="350" alt="custom augmentation"/>
+    
+    Figure 2: Custom augentation
+    
 
 ## 3. First Model
 
