@@ -1,5 +1,5 @@
 # Leaf Classification
-> with Giovanni Dragonetti, Erica Espinosa
+> using Artificial Neural Networks
 
 ## 1. Introduction
 The problem we had to face is the classification of leaves images. Our dataset is composed by 17.728 images divided into 14 classes: Apple, Blueberry, Cherry, Corn, Grape, Orange, Peach, Pepper, Potato, Raspberry, Soybean, Squash, Strawberry and Tomato. Most of the images have dimensions 256 x 256 and have been isolated on a black background except for three outliers with different shapes; we resized them either before feeding them to the network or in the network itself. We first noticed the unbalanceness of our classes, as shown in *Figure 1*. To address this issue, we experimented two different approaches: class weights and dataset balancing via upsampling. We first built a simple model to check what we could achieve with very few levels, then we experimented the transfer learning technique with some of the most important models in image recognition.
