@@ -62,4 +62,4 @@ The fact that the performance obtained with MobileNetV3 is comparable with the o
 To make our model more robust, a future improvement could be to split our biggest category (Tomato) in $k$ subsets $S_i$ such that $|S_i|$ is comparable with the cardinality of the other class sets. Then train $k$ models, one for each $S_i$ and all the other whole categories and finally average them. We couldn’t try this approach for time reasons. 
 
 ## Acknowledgement
-This project was realised together with Giovanni Dragonetti and Erica Espinosa. 
+This project was realised together with `Giovanni Dragonetti` and `Erica Espinosa`. 
